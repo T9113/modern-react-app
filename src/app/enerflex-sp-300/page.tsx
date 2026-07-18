@@ -2,7 +2,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductLiterature from '@/components/ProductLiterature';
 import ProductContactSection from '@/components/ProductContactSection';
-
+import ProductHero from '@/components/ProductHero';
 
 import { sp300Docs } from '@/data/products';
 import { buildMetadata } from '@/lib/seo';
@@ -42,7 +42,22 @@ export default function SP300Page() {
             className="sp300-hero-media"
             priority
           />
-        </div>
+        </div><ProductHero
+          imageSrc="/images/products/sp300/product.webp"
+          imageAlt="EnerFlex SP 300"
+        >
+          <h4>100% Silicone White Roof Coating</h4>
+          <h5>Premium Formulation</h5>
+          <p className="key-features-label">Key Features:</p>
+          <ul>
+            <li>Quick drying</li>
+            <li>Ponding water resistant</li>
+            <li>Extremely easy application</li>
+            <li>Cool Roofing – Lowers utility bills</li>
+            <li>Long lasting protection even with single coat</li>
+            <li>Highest possible adhesion with almost all types of substrates</li>
+          </ul>
+        </ProductHero>
       <div className="container page-container">
         {/* Hero Section - Single slider image */}
        

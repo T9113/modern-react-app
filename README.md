@@ -1,16 +1,76 @@
-# React + Vite
+# Enercon Group Website - Next.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This is the Next.js version of the Enercon Group website, converted from WordPress while maintaining the exact design and structure.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Install dependencies:
 
-## React Compiler
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Run the development server:
 
-## Expanding the Oxlint configuration
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+```
+enercon-nextjs/
+├── src/
+│   ├── app/               # Next.js App Router pages
+│   ├── components/        # Reusable components
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── ContactForm.tsx
+│   │   └── ...
+│   ├── styles/           # Global styles and CSS modules
+│   └── public/           # Static assets
+```
+
+## Features
+
+- ✅ Exact design match with WordPress version
+- ✅ Reusable Header and Footer components
+- ✅ All pages converted (Home, About, Contact, Products, etc.)
+- ✅ Contact forms functional
+- ✅ Responsive design maintained
+- ✅ SEO optimized
+
+## Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Technologies
+
+- Next.js 15
+- React 19
+- TypeScript
+- CSS Modules
+
+## SMTP / Contact Form Configuration
+
+The contact form sends emails via SMTP using Nodemailer.
+
+1. Copy `.env.example` to `.env` (or `.env.local`).
+2. Fill in your SMTP credentials:
+   - `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`
+   - Optional: `SMTP_SECURE` (true for port 465) and `CONTACT_FORM_TO` / `SMTP_FROM`
+
+The server reads the values from `process.env` when handling form submissions.

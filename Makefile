@@ -4,3 +4,5 @@ lint:
 	@echo 'Linting'
 test:
 	@echo 'Testing'
+check:
+	@echo 'checkoing'
